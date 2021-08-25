@@ -30,20 +30,15 @@
         $paragraphLength = strlen($paragraph);
 
         if ($censoredWord != null) {
-            $header = "Il seguente paragrafo conteneva una parola scomoda che è stata censurata ed è lungo ";
+            $heading = "Il seguente paragrafo conteneva una parola scomoda che è stata censurata ed è lungo {$paragraphLength} caratteri:";
         } else {
-            $header = "Il seguente paragrafo è lungo ";
+            $heading = "Il seguente paragrafo è lungo {$paragraphLength} caratteri:";
         }
 
     ?>
 
     <!-- stampo il paragrafo e la sua lunghezza -->
-    <h3>
-        <?php 
-            echo $header;
-            echo $paragraphLength;
-        ?> caratteri:
-    </h3>
+    <h3><?php echo $heading ?></h3>
     
     <p><?php echo $paragraph ?></p>
 </body>
